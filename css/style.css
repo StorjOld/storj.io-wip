@@ -1,3 +1,12 @@
+// Storj - The Future of Cloud Storage
+
+/* --------------------------------
+
+Fonts
+
+-------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,800');
 
 /* --------------------------------
 
@@ -23,9 +32,13 @@ html {
 
 body {
 	font-size: 1.6rem;
-	font-family:'AvenirNextLTW01-Regular';
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	background: #fff;
 }
-
+b, strong {
+	font-weight: 800;
+}
 a {
 	text-decoration: none;
     -webkit-transition: all 0.15s ease-in-out;
@@ -55,7 +68,7 @@ h1, h2, h3, h4, h5, h6, a, p, span {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Avenir Next LT W01 Bold';
+	font-weight: 800;
 	color: #2683FF;
 	margin-bottom: 0.6em;
 }
@@ -63,11 +76,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1em;
 }
 p {
-	font-family: 'AvenirNextLTW01-Regular';
+	font-weight: 300;
 	line-height: 1.6em;
-}
-b {
-	font-family:'Avenir Next LT W01 Demi';
 }
 img {
 	-webkit-user-select: none;
@@ -84,7 +94,7 @@ img {
 	background: #fff;
 }
 .grey {
-	background: #f9f9f9;
+	background: #f2f4f6;
 }
 
 .spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
@@ -113,9 +123,11 @@ Buttons
 -------------------------------- */
 
 .btn {
-	font-family: 'Avenir Next LT W01 Bold';
+	font-weight: 800;
+	text-transform: uppercase;
 	background: #2683FF;
 	color: #FFF;
+	font-size: 16px;
 	padding: 14px 50px;
 	border-radius: 4px;
 	z-index: 2;
@@ -297,7 +309,6 @@ Navigation
 }
 .nav>li>a:hover, .nav>li>a:focus {
     background: none;
-    // box-shadow: 0 2px #fff;
     color: #fff;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
@@ -310,43 +321,44 @@ Navigation
 }
 .navbar-default .navbar-nav>li>a:hover {
 	color: #fff;
+	text-decoration: underline;
 }
 .navbar .dropdown {
 	display: inline-block;
 }
 
-.home .nav>li>a {
-	border-bottom: 2px transparent;
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: transparent;
+    color: #fff;
 }
+
 .home .nav>li>a.link:hover, .home .nav>li>a.link:focus {
-    border-bottom: 2px solid #fff;
+    text-decoration: underline;
 }
 
 .navbar-page {
 	border: 0;
-	border-bottom: 2px solid #eee;
 	border-radius: 0;
 	background: #fff;
 }
 .navbar-page .navbar-nav>li>a {
 	padding: 40px 16px;
 	width: 100%;
-    color: #8492a6;
+    color: #333;
     border: 0;
 }
 .navbar-page .navbar-nav>li>a:hover {
 	color: #2683ff;
 }
-.navbar-page .nav>li>a:hover, .navbar-page .nav>li>a:focus {
-    box-shadow: 0 2px #2683ff;
+.navbar-page .nav>li>a.link:hover, .navbar-page .nav>li>a.link:focus {
+    text-decoration: underline;
 }
+.
 .navbar-page .navbar-nav>li>a:hover, .navbar-page .navbar-nav>li>a:focus {
     color: #2683ff;
 }
 .navbar-page .navbar-nav>li>a.active {
-	font-family: 'Avenir Next LT W01 Demi';
 	color: #2683ff;
-	box-shadow: 0 2px #2683ff;
 }
 .navbar-page .navbar-toggle {
 	margin-top: 34px;
@@ -358,6 +370,46 @@ Navigation
 }
 .navbar-page .navbar-toggle:hover .icon-bar {
 	background: #fff;
+}
+
+.navbar .dropdown-menu {
+    background: rgba(0,0,0,0.4);
+    top: 80px;
+    padding: 0;
+}
+.home .navbar .dropdown-menu {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar .dropdown-menu>li>a {
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom: 0;
+    border: 0;
+    padding: 1em;
+}
+.navbar .dropdown-menu>li>a:hover {
+	color: #333;
+    text-decoration: underline;
+}
+
+.navbar-page .navbar-nav>.open>a, .navbar-page .navbar-nav>.open>a:hover, .navbar-page .navbar-nav>.open>a:focus {
+    color: #2683ff;
+}
+.navbar-page .navbar-nav>li>a:hover, .navbar-page .navbar-nav>li>a:focus {
+    color: #2683ff;
+}
+.navbar-page .dropdown-menu {
+	background: #fff;
+}
+.navbar-page .dropdown-menu>li>a {
+	color: #333;
+}
+.navbar-page .dropdown-menu>li>a:hover {
+	color: #2683ff;
+}
+.navbar-page .dropdown-menu>li>a:active {
+	color: #2683ff;
 }
 
 .btn-rent {
@@ -372,6 +424,7 @@ Navigation
 	border-color: #fff;
 	color: #fff !important;
 	box-shadow: none !important;
+	text-decoration: none !important;
 }
 .btn-rent.active {
 	border-color: #fff !important;
@@ -529,7 +582,7 @@ Animated Headlines
 }
 .cd-headline.type b {
   visibility: hidden;
-  font-family: "Avenir Next LT W01 Bold";
+  font-weight: 800;
 }
 .cd-headline.type b.is-visible {
   visibility: visible;
@@ -622,7 +675,7 @@ canvas {
 }
 
 .header {
-	min-height: 840px;
+	min-height: 600px;
 	background: #020307;
 	background: -moz-linear-gradient(top, #020307 0%, #144fbc 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, #020307), color-stop(100%, #144fbc));
@@ -638,7 +691,6 @@ canvas {
 	user-select: none;
 	position: relative;
 	height: 100vh;
-	max-height: 900px;
 	overflow: hidden;
 }
 
@@ -653,7 +705,7 @@ canvas {
 	margin-bottom: 0.5em;
 }
 .page .lead {
-	color: #555;
+	color: #333;
 	margin-bottom: 1em;
 }
 .header-bg {
@@ -684,7 +736,8 @@ canvas {
 	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
-	top: 140px;
+	top: 190px;
+	top: 25vh;
 	z-index: 2;
 	padding: 1em;
 }
@@ -704,14 +757,15 @@ canvas {
 }
 .notice {
 	color: #fff;
-	opacity: 0.4;
-	font-family: 'Avenir Next LT W01 Demi';
+	opacity: 0.7;
 }
 .home .btn {
 	position: relative;
 	z-index: 2;
 	max-width: 360px;
-    box-shadow: 0 9px 27px rgba(50,50,93,.1);
+}
+.open-source .btn {
+	margin: 1.4em auto 0;
 }
 .home input {
 	max-width: 360px;
@@ -759,21 +813,32 @@ Value Propositions
 -------------------------------- */
 
 .value {
-	padding: 1.5em 0;
+	padding: 4em 0 2em;
 	z-index: 3;
 	position: relative;
 }
 .value h4 {
-	font-family: 'Avenir Next LT W01 Bold';
 	margin-top: 1.2em;
 }
 .value p {
 	padding-bottom: 0.4em;
-	color: #003366;
 }
 .value img {
-	height: 52px;
-	margin-top: 1em;
+	height: 62px;
+}
+.value-icon {
+	background: #fff;
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+	border: 1px solid #eee;
+	padding: 2.7em 2em;
+	margin: 2em auto;
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+}
+.icon-opensource {
+	height: 80px;
+	margin-top: -12px;
 }
 
 
@@ -785,13 +850,14 @@ Developers
 
 .terminal-wrapper {
 	width: 100%;
-	max-width: 600px;
+	max-width: 642px;
     margin: 0 auto;
-    background: #020202;
+    background: #fff;
     border-radius: 9px;
     height: 260px;
     margin-top: 2.1em;
-	box-shadow: 0 9px 27px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+	border: 1px solid #eee;
 }
 .terminal-content {
 	text-align: left;
@@ -802,7 +868,7 @@ Developers
     font-weight: bold;
     font-family: monospace;
     background: none;
-    color: #88C425;
+    color: #333;
 }
 .noselect {
 	-webkit-touch-callout: none;
@@ -814,7 +880,7 @@ Developers
 	cursor: default;
 }
 .terminal-content .noselect {
-	color: #88C425;
+	color: #333;
 }
 .contributor-profile {
 	width: 70px;
@@ -822,7 +888,7 @@ Developers
 	border-radius: 35px;
 	margin: 0.8em 0.4em;
 	display: inline-block;
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .github-card {
 	margin: 2em auto;
@@ -835,7 +901,8 @@ Developers
 	margin: 20px 0;
     background: #fff;
     border-radius: 9px;
-    box-shadow: 0 9px 27px rgba(50,50,93,.1);
+    box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+    border: 1px solid #eee;
 }
 pre {
 	border: 0;
@@ -863,7 +930,7 @@ pre {
 	border-left: 4px solid #f2f2f2;
 }
 .nav-stacked li.active a {
-    font-weight: bold;
+    font-weight: 800;
     color: #2683ff;
     background: #fff;
     border-left-color: #2683ff;
@@ -889,6 +956,10 @@ Storj Share
 
 .storjshare {
 	background: #2175e5;
+	background: -moz-radial-gradient(top, ellipse cover, #076caf 0%, #102166 50%);
+    background: -webkit-radial-gradient(top, ellipse cover, #076caf 0%, #102166 50%);
+    background: radial-gradient(at top, #076caf 0%, #102166 50%);
+    background-repeat: no-repeat;
 }
 .storjshare-intro h1 {
 	color: #fff;
@@ -909,7 +980,7 @@ Storj Share
 }
 .storjshare-intro .btn-white {
 	padding: 24px 42px;
-	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 	margin-bottom: 0.9em;
 }
 .storjshare-intro .btn:hover {
@@ -922,9 +993,10 @@ Storj Share
 	 margin: 2em 0em 2em 5em;
 }
 .icon-storjshare {
-	height: 42px;
-	margin-bottom: 1em;
-	margin-top: 2em;
+	height: 62px;
+}
+.icon-storjshare-opensource {
+	height: 67px;
 }
 .label.beta {
     color: #fff;
@@ -947,7 +1019,8 @@ Exchanges
   margin: 30px 20px 20px;
   background: #fff;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
@@ -972,7 +1045,8 @@ Calculator
   background: #fff;
   margin: 2em 0;
   border-radius: 8px;
-  box-shadow: 0 9px 27px rgba(50,50,93,.1);
+  box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+  border: 1px solid #eee;
 }
 .calculator input {
   display: inline-block;
@@ -990,7 +1064,9 @@ Calculator
   text-indent: 0;
   cursor: pointer;
   font-size: 28px;
+  font-weight: 800;
   color: #555;
+  height: 58px;
 }
 .calculator-unit {
   padding: 0;
@@ -1019,7 +1095,6 @@ Calculator
   border-left: 0;
   text-align: left;
   font-size: 28px;
-  font-family: 'Avenir Next LT W01 Bold';
 }
 .calculator .input-group-addon:first-child {
   background: #fff;
@@ -1029,20 +1104,22 @@ Calculator
   border-bottom-right-radius: 0;
   border-right: 0;
   font-size: 28px;
-  font-family: 'Avenir Next LT W01 Bold';
   color: #88C425;
+  font-weight: 800;
 }
 .promise {
-  color: #aaa;
-  font-size: 11px;
+  color: #999;
+  font-size: 10px;
+  margin-top: 14px;
 }
 input.calculator-price {
-  font-family: 'Avenir Next LT W01 Bold';
+  font-weight: 800;
   color: #88C425;
   font-size: 28px;
   background: #fff !important;
   height: 60px;
   box-shadow: none;
+  -moz-appearance:textfield;
 }
 input.calculator-price:focus {
   border: 1px solid #ddd;
@@ -1052,7 +1129,7 @@ input.calculator-price:focus {
   font-size: 28px;
   height: 60px;
   padding-left: 20px;
-  font-family: 'Avenir Next LT W01 Bold';
+  font-weight: 800;
 }
 
 
@@ -1062,28 +1139,30 @@ Pricing
 
 -------------------------------- */
 
-
+.pricing.section {
+	padding-bottom: 4em;
+}
 .plans {
 	margin: 1em auto;
 }
 .plan {
 	background: #fff;
 	margin: 2em 0;
+	border: 1px solid #eee;
 	border-radius: 5px;
-	box-shadow: 0 9px 27px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .plan-icon {
 	margin-top: 2em;
 	margin-bottom: 0.2em;
-	width: 52px;
-	height: 52px;
+	height: 62px;
 }
 .plan-title {
 	line-height: 4em;
 	text-transform: uppercase;
 	margin-bottom: 0;
-	border-bottom: 2px solid #eee;
-	font-family: 'Avenir Next LT W01 Bold';
+	border-bottom: 1px solid #eee;
+	font-weight: 800;
 	color: #2683ff;
 }
 .plan-pricing {
@@ -1091,18 +1170,18 @@ Pricing
     font-size: 42px;
     margin-top: 16px;
     padding-bottom: 42px;
-    font-family: 'Avenir Next LT W01 Bold';
+    font-weight: 800;
     color: #2683ff;
 }
-.home .plan-pricing {
+.plan-pricing {
 	margin-top: 0;
 }
 .plan-pricing span {
 	display: block;
-	font-size: 18px;
+	font-size: 15px;
 	line-height: 0;
 	background: #fff;
-	color: #003366;
+	text-transform: uppercase;
 }
 
 .plan h4 {
@@ -1111,12 +1190,10 @@ Pricing
     color: #333;
 }
 .plan-currency {
-	font-family: 'Avenir Next LT W01 Demi';
 	font-size: 36px;
 	vertical-align: top;
 }
 .plan-feature-number, .plan-select-storage, .plan-select-transfer {
-	font-family: 'Avenir Next LT W01 Demi';
     margin-bottom: 1.5em;
 }
 
@@ -1135,13 +1212,13 @@ Pricing
 	height: 7em;
 	padding-left: 1em;
 	padding-right: 1em;
-	border-bottom: 2px solid #f2f2f2;
+	border-bottom: 1px dashed #eee;
 }
 .compare-storj {
     border-radius: 10px;
     background: #fff;
-    border: 0;
-    box-shadow: 0 9px 27px rgba(50,50,93,.1);
+    border: 1px solid #eee;
+    box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .compare-storj .compare-logo {
 	max-width: 184px;
@@ -1155,7 +1232,7 @@ Pricing
     margin-top: 22px;
     line-height: 2em;
     font-size: 34px;
-    font-family: 'Avenir Next LT W01 Bold';
+    font-weight: 800;
     color: #999;
 }
 .compare-pricing span {
@@ -1202,15 +1279,11 @@ Upload Section
 .upload-text {
 	display: inline-block;
 }
-.upload h4 {
-    font-family: 'Avenir Next LT W01 Bold';
-}
 .upload-gui {
 	width: 100%;
 	max-width: 460px;
 	margin-bottom: 1em;
 }
-
 .upload-intro {
 	margin-bottom: 3em;
 }
@@ -1226,10 +1299,11 @@ Quotes
 	padding: 4em 0;
 }
 .quote-image {
-	width: 110px;
-	height: 110px;
+	width: 134px;
+	height: 134px;
 	border-radius: 50%;
-	margin: 0 auto 1em;
+	margin: 0 auto 1.4em;
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 
 .slick-slider {
@@ -1248,14 +1322,18 @@ Quotes
 .slick-prev:before, .slick-next:before {
     color: #2683ff !important;
 }
+.slick-prev, .slick-next {
+    z-index: 99;
+}
 .slick-slide p {
 	line-height: 1.5;
+	font-size: 16px;
 }
 blockquote {
 	background: #fff;
-	box-shadow: 0 9px 27px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 	border-radius: 5px;
-	border: 0;
+	border: 1px solid #eee;
 }
 
 
@@ -1266,14 +1344,14 @@ C2A
 -------------------------------- */
 
 .c2a-wrapper {
-	padding: 4em 0 5em;
+	padding: 5em 0 6em;
 }
 .c2a h1 {
 	font-size: 42px;
 	margin-bottom: 0.5em;
 }
 .c2a p {
-	margin-bottom: 2em;
+	margin-bottom: 1.8em;
 	font-size: 18px;
 }
 
@@ -1287,7 +1365,7 @@ Video
 .storj-video {
 	margin-top: 15px;
 	padding: 0;
-	box-shadow: 0 9px 27px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 
 .storj-video-wrapper {
@@ -1314,6 +1392,7 @@ Video
 .video-thumbnail {
 	background: url('../img/video-thumbnail.png') no-repeat center;
 	background-size: 100%;
+	background-color: #fff;
 	cursor:pointer;
 	border: 1px solid #ddd;
 	border-radius: 4px;
@@ -1334,7 +1413,7 @@ Footer
 -------------------------------- */
 
 footer {
-	padding-top: 3em;
+	padding-top: 3.5em;
 	background: #0e2338;
 	background: url("../img/bg.jpg") center top no-repeat;
 	background-size: cover;
@@ -1346,10 +1425,10 @@ footer {
 .footer-logo {
 	display: block;
 	margin-bottom: 2px;
-    margin-top: 4px;
+    margin-top: 1px;
 }
 .footer-logo img {
-	width: 80px;
+	width: 90px;
 	display: block;
 }
 footer a {
@@ -1365,15 +1444,15 @@ footer p {
 	font-size: 14px;
     line-height: 28px;
     margin-bottom: 4px;
-    color: #003366;
+    color: #fff;
 }
 footer h5 {
     padding-bottom: 0.5em;
     margin-top: 1em;
-    font-family: 'Avenir Next LT W01 Bold';
+    color: #fff;
+    text-transform: uppercase;
 }
 footer .connect {
-	margin: 2em auto 1em;
 }
 footer .connect a {
 	padding-right: 1.2em;
@@ -1385,6 +1464,7 @@ footer .address {
 footer .address address {
 	margin: 0;
 	color: #525d69;
+	color: rgba(255,255,255,0.4);
 	font-size: 14px;
 }
 footer .list-unstyled {
@@ -1396,7 +1476,7 @@ footer .list-unstyled {
     width: 22px;
     margin-right: 0.6em;
     opacity: 1;
-    background: #2683ff;
+    background: #fff;
     border-radius: 3px;
     padding: 4px;
 }
@@ -1408,10 +1488,6 @@ Buckets
 
 -------------------------------- */
 
-body.page {
-	background: #f9f9f9;
-	// padding-bottom: 3em;
-}
 .content {
 	border: 1px solid #eee;
     background: #fff;
@@ -1445,7 +1521,6 @@ th, td {
     border-top: 1px solid #eee;
 }
 .bucket-plan a {
-	font-family: 'Avenir Next LT W01 Demi';
 	text-decoration: none;
 }
 .bucket-icon {
@@ -1471,7 +1546,6 @@ th, td {
 }
 
 .page .btn-block {
-    font-size: 16px;
     margin: 0.5em auto;
     padding: 0.9em 0 0.8em;
 }
@@ -1579,8 +1653,19 @@ Community
 
 -------------------------------- */
 
+.newsletter {
+	padding: 24px;
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+	border: 1px solid #eee;
+	border-radius: 10px;
+	background: repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px)
+}
+.newsletter-inner {
+	background: #fff;
+	padding: 48px 32px 42px;
+}
 twitterwidget {
-    box-shadow: 0 9px 27px rgba(50,50,93,.1);
+    box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
     border-radius: 9px;
     margin: 0 auto;
 }
@@ -1616,17 +1701,16 @@ TEAM
 	width: 70%;
 	max-width: 180px;
 	height: 70%;
-	box-shadow: 0 2px 9px #ccc;
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .team-member-name {
 	height: 25px;
 	margin-bottom: 10px;
-	font-family: 'Avenir Next LT W01 Bold';
+	font-weight: 800;
 }
 .team-member-title {
   height: 40px;
   font-size: 15px;
-  color: #555;
 }
 
 .get-in-touch {
@@ -1641,46 +1725,52 @@ FAQ
 
 -------------------------------- */
 
+.panel {
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
+	border: 1px solid #eee;
+}
 .panel-title {
 	border-top-right-radius: 3px;
 	border-top-left-radius: 3px;
-	background: #2683ff;
+	background: none;
 	line-height: 32px;
 	margin-top: 0;
-	font-family: 'Avenir Next LT W01 Demi';
+	font-weight: 300;
 }
 .panel-title a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 12px 20px;
-  color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 12px 20px;
+	color: #2683ff;
 }
 .panel-title [data-toggle="collapse"].collapsed {
-  background: #fff;
+	background: none;
 }
 .panel-title a.collapsed {
-  color: #2683ff !important;
+	color: #333;
 }
 .panel-body {
-  padding: 20px 30px 15px;
-  background: #fff;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
+	padding: 20px 30px 15px;
+	background: #fff;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
 }
 .panel-body li {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .panel-body li p {
-  font-weight: bold;
+	font-weight: 800;
 }
-.panel-heading {
-	padding: 0;
+.panel-default>.panel-heading {
+    background: #fff;
+    border-radius: 4px;
+    padding: 0;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #eee;
 }
 .panel-group .panel {
-    border: 0;
     margin-bottom: 14px;
 }
 .panel-link:hover {
@@ -1689,13 +1779,13 @@ FAQ
 }
 .panel-card {
 	padding: 44px;
-	box-shadow: 0 9px 27px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .panel-link:hover .panel-card {
-	box-shadow: 0 4px 8px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .panel-link:active .panel-card {
-	box-shadow: 0 1px 2px rgba(50,50,93,.1);
+	box-shadow: 0 1px 15px rgba(3, 104, 255, 0.15);
 }
 .panel-link p {
 	color: #333;
@@ -1716,6 +1806,8 @@ Press
   line-height: 32px;
   font-size: 18px;
   border: 0;
+  font-weight: 300;
+  border-bottom: 1px solid;
 }
 .press-date {
   margin-top: 8px;
@@ -1842,9 +1934,6 @@ Media Queries
 
 
 @media (min-width: 1200px) {
-	// body.page .container {
- //    	width: 1020px;
-	// }
     .text-left-lg {
       text-align: left;
     }
@@ -1900,6 +1989,9 @@ Media Queries
     	margin-left: 0;
     	margin-right: -4em;
   	}
+  	.panel-card {
+  		padding: 44px 22px;
+  	}
 }
 
 @media (max-width: 991px) {
@@ -1919,23 +2011,14 @@ Media Queries
     .upload-gui {
     	margin-top: 1em;
     }
-    .navbar-page .navbar-brand {
-		margin-right: 0;
-	}
-	.navbar-nav>li>a {
-    	padding: 40px 10px;
+	.navbar-nav>li>a, .navbar-page .navbar-nav>li>a {
+    	padding: 40px 8px;
     	font-size: 14px;
 	}
 	.btn-menu {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	.value p {
-    	font-size: 15px;
-    }
-    .value h4 {
-    	font-size: 14px;
-    }
 	.team-member {
     	width: 50%;
 	}
@@ -1944,7 +2027,7 @@ Media Queries
 @media (min-width: 767px) and (max-width: 991px) {
     .logo {
     	margin: 0;
-    	margin-right: 20px;
+    	margin-right: 8px;
     }
 }
 
@@ -1996,6 +2079,54 @@ Media Queries
     	margin-top: 2em;
     	margin-right: 2em;
 	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+	    color: #fff;
+	}
+	.navbar-page .navbar-nav .open .dropdown-menu>li>a {
+	    color: #333;
+	    font-size: 14px;
+	}
+	..navbar-page .navbar-nav .open .dropdown-menu>li>a {
+	    color: #333;
+	    font-size: 14px;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+    	color: #fff;
+    	text-decoration: underline;
+	}
+	.navbar-page .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-page .navbar-nav .open .dropdown-menu>li>a:focus {
+    	color: #2683ff;
+    	text-decoration: underline;
+    	background: #f2f2f2;
+	}
+	.navbar .dropdown.open {
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+	}
+	.navbar-page .dropdown.open {
+	    border-bottom: 0;
+	}
+	.navbar-page .open .dropdown-menu {
+    	background-color: #f9f9f9;
+	}
+	.home .navbar .dropdown-menu {
+	    border: 1px solid rgba(255, 255, 255, 0.2);
+	    background: rgba(0,0,0,0.4);
+	    border: 0;
+	    text-indent: -8px;
+	}
+	.navbar-page .dropdown-menu {
+		text-indent: -8px;
+	}
+	.navbar li.dropdown {
+	    width: 100%;
+	}
+	.navbar .dropdown {
+		box-shadow: none;
+	}
+	.navbar-nav .open .dropdown-menu>li>a {
+	    line-height: 42px;
+	    text-align: center;
+	}
 	.btn-menu {
 		width: 100%;
 		margin: 0.5em 0;
@@ -2031,9 +2162,9 @@ Media Queries
 		height: auto;
 	}
 	.compare-storj .compare-logo {
-		height: 25px;
-		width: auto;
-		margin-top: 2.5em;
+		height: 62px;
+	    width: auto;
+	    margin-top: 1.5em;
 	}
 	.team-member {
     	padding: 30px 8px;
@@ -2138,9 +2269,9 @@ Media Queries
 		height: auto;
 	}
 	.compare-storj .compare-logo {
-		height: 22px;
-		width: auto;
-		margin-top: 2.6em;
+		height: 54px;
+	    width: auto;
+	    margin-top: 1.5em;
 	}
 	.team {
     	padding-top: 50px !important;
